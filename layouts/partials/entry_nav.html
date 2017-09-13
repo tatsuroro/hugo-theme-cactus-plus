@@ -2,29 +2,29 @@
 <nav class='entry-nav'>
   <div class='entry-nav-links'>
 
-    {{- if .PrevInSection -}}
+    {{ if .PrevInSection }}
     <div class='prev-entry'>
 			<span class='entry-nav-label' aria-hidden='true'>
-				{{- partial "svg/icons" "prev" -}}
-				{{- print " previous" -}}
+				{{ partial "svg/icons" "prev" }}
+				{{ print " previous" }}
 			</span>
       <a href='{{ .PrevInSection.Permalink }}'>
-        {{- .PrevInSection.Title -}}
+        {{ .PrevInSection.Title }}
       </a>
     </div>
-    {{- end -}}
+    {{ end }}
 
-    {{- if .NextInSection -}}
+    {{ if .NextInSection }}
     <div class='next-entry'>
       <a href='{{ .NextInSection.Permalink }}'>
-        {{- .NextInSection.Title -}}
+        {{ .NextInSection.Title }}
       </a>
 			<span class='entry-nav-label' aria-hidden='true'>
-				{{- print "next " -}}
-				{{- partial "svg/icons" "next" -}}
+				{{ print "next " }}
+				{{ partial "svg/icons" "next" }}
 			</span>
     </div>
-    {{- end -}}
+    {{ end }}
 
   </div>
 </nav>
